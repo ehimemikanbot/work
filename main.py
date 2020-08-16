@@ -10,6 +10,7 @@ from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,FlexSendMessage,BubbleContainer
 )
 import os
+import json
 
 app = Flask(__name__)
 
@@ -99,7 +100,7 @@ def handle_message(event):
     #    TextSendMessage(text=event.message.text)) #ここでオウム返しのメッセージを返します。
     line_bot_api.reply_message(
         event.reply_token,
-        FlexSendMessage(alt_text="items",contents=container_obj)
+        FlexSendMessage(alt_text="items",contents=BubbleContainer.new_from_json_dict(json.load(menu)))
     )
  
 # ポート番号の設定
