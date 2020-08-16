@@ -7,7 +7,7 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import (
-    MessageEvent, TextMessage, TextSendMessage,FlexSendMessage
+    MessageEvent, TextMessage, TextSendMessage,FlexSendMessage,BubbleContainer
 )
 import os
 
@@ -92,7 +92,7 @@ def index():
 def handle_message(event):
 
     #FlexMessage
-    container_obj = FlexSendMessage.new_from_json_dict(menu)
+    container_obj = BubbleContainer.new_from_json_dict(menu)
 
     #line_bot_api.reply_message(
     #    event.reply_token,
