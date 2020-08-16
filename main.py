@@ -7,11 +7,12 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import (
-    MessageEvent, TextMessage, TextSendMessage,
+    MessageEvent, TextMessage, TextSendMessage,FlexSendMessage
 )
 import os
 
 app = Flask(__name__)
+
 
 # 環境変数取得
 # LINE Developersで設定されているアクセストークンとChannel Secretをを取得し、設定します。
@@ -21,6 +22,37 @@ YOUR_CHANNEL_SECRET = os.environ["YOUR_CHANNEL_SECRET"]
 line_bot_api = LineBotApi(YOUR_CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(YOUR_CHANNEL_SECRET)
  
+menu = {
+  "type": "template",
+  "altText": "this is a buttons template",
+  "template": {
+    "type": "buttons",
+    "actions": [
+      {
+        "type": "message",
+        "label": "引越し",
+        "text": "引越し"
+      },
+      {
+        "type": "message",
+        "label": "アクション 2",
+        "text": "アクション 2"
+      },
+      {
+        "type": "message",
+        "label": "アクション 3",
+        "text": "アクション 3"
+      },
+      {
+        "type": "message",
+        "label": "アクション 4",
+        "text": "アクション 4"
+      }
+    ],
+    "title": "質問メニュー",
+    "text": "聞きたい内容を以下から選んでください"
+  }
+}
 
 ## 1 ##
 # Webhookからのリクエストをチェックします。
@@ -60,7 +92,7 @@ def index():
 def handle_message(event):
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=event.message.text & "メッセージありがとう")) #ここでオウム返しのメッセージを返します。
+        TextSendMessage(text=event.message.text)) #ここでオウム返しのメッセージを返します。
  
 # ポート番号の設定
 if __name__ == "__main__":
