@@ -7,7 +7,7 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import (
-    MessageEvent, TextMessage, TextSendMessage,FlexSendMessage,BubbleContainer
+    MessageEvent, TextMessage, TextSendMessage,FlexSendMessage
 )
 import os
 import json
@@ -257,9 +257,10 @@ def handle_message(event):
     #line_bot_api.reply_message(
     #    event.reply_token,
     #    TextSendMessage(text=event.message.text)) #ここでオウム返しのメッセージを返します。
+    # memo:::FlexSendMessage(alt_text='hoge',contents=container_obj)
     line_bot_api.reply_message(
         event.reply_token,
-        FlexSendMessage(alt_text='hoge',contents=container_obj)
+        FlexSendMessage.new_from_json_dict(menu)
     )
  
 # ポート番号の設定
