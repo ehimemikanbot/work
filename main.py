@@ -101,7 +101,7 @@ def handle_message(event):
     #    TextSendMessage(text=event.message.text)) #ここでオウム返しのメッセージを返します。
     line_bot_api.reply_message(
         event.reply_token,
-        container_obj
+        FlexSendMessage(alt_text='hoge',container_obj)
     )
  
 # ポート番号の設定
