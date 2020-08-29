@@ -92,15 +92,16 @@ def index():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
 
-    #FlexMessage
-    container_obj = BubbleContainer.new_from_json_dict(menu)
+    #FlexMessage ##
+    #container_obj = BubbleContainer.new_from_json_dict(menu)
+    container_obj = FlexSendMessage.new_from_json_dict(menu)
 
     #line_bot_api.reply_message(
     #    event.reply_token,
     #    TextSendMessage(text=event.message.text)) #ここでオウム返しのメッセージを返します。
     line_bot_api.reply_message(
         event.reply_token,
-        FlexSendMessage(alt_text="items",contents=container_obj)
+        container_obj
     )
  
 # ポート番号の設定
