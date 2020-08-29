@@ -23,161 +23,161 @@ YOUR_CHANNEL_SECRET = os.environ["YOUR_CHANNEL_SECRET"]
 line_bot_api = LineBotApi(YOUR_CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(YOUR_CHANNEL_SECRET)
 
-# menu = {
-#   "type": "flex",
-#   "altText": "Flex Message",
-#   "contents": {
-#     "type": "bubble",
-#     "hero": {
-#       "type": "image",
-#       "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
-#       "size": "full",
-#       "aspectRatio": "20:13",
-#       "aspectMode": "cover",
-#       "action": {
-#         "type": "uri",
-#         "label": "Line",
-#         "uri": "https://linecorp.com/"
-#       }
-#     },
-#     "body": {
-#       "type": "box",
-#       "layout": "vertical",
-#       "contents": [
-#         {
-#           "type": "text",
-#           "text": "Brown Cafe",
-#           "size": "xl",
-#           "weight": "bold"
-#         },
-#         {
-#           "type": "box",
-#           "layout": "baseline",
-#           "margin": "md",
-#           "contents": [
-#             {
-#               "type": "icon",
-#               "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
-#               "size": "sm"
-#             },
-#             {
-#               "type": "icon",
-#               "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
-#               "size": "sm"
-#             },
-#             {
-#               "type": "icon",
-#               "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
-#               "size": "sm"
-#             },
-#             {
-#               "type": "icon",
-#               "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
-#               "size": "sm"
-#             },
-#             {
-#               "type": "icon",
-#               "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png",
-#               "size": "sm"
-#             },
-#             {
-#               "type": "text",
-#               "text": "4.0",
-#               "flex": 0,
-#               "margin": "md",
-#               "size": "sm",
-#               "color": "#999999"
-#             }
-#           ]
-#         },
-#         {
-#           "type": "box",
-#           "layout": "vertical",
-#           "spacing": "sm",
-#           "margin": "lg",
-#           "contents": [
-#             {
-#               "type": "box",
-#               "layout": "baseline",
-#               "spacing": "sm",
-#               "contents": [
-#                 {
-#                   "type": "text",
-#                   "text": "Place",
-#                   "flex": 1,
-#                   "size": "sm",
-#                   "color": "#AAAAAA"
-#                 },
-#                 {
-#                   "type": "text",
-#                   "text": "Miraina Tower, 4-1-6 Shinjuku, Tokyo",
-#                   "flex": 5,
-#                   "size": "sm",
-#                   "color": "#666666",
-#                   "wrap": True
-#                 }
-#               ]
-#             },
-#             {
-#               "type": "box",
-#               "layout": "baseline",
-#               "spacing": "sm",
-#               "contents": [
-#                 {
-#                   "type": "text",
-#                   "text": "Time",
-#                   "flex": 1,
-#                   "size": "sm",
-#                   "color": "#AAAAAA"
-#                 },
-#                 {
-#                   "type": "text",
-#                   "text": "10:00 - 23:00",
-#                   "flex": 5,
-#                   "size": "sm",
-#                   "color": "#666666",
-#                   "wrap": True
-#                 }
-#               ]
-#             }
-#           ]
-#         }
-#       ]
-#     },
-#     "footer": {
-#       "type": "box",
-#       "layout": "vertical",
-#       "flex": 0,
-#       "spacing": "sm",
-#       "contents": [
-#         {
-#           "type": "button",
-#           "action": {
-#             "type": "uri",
-#             "label": "CALL",
-#             "uri": "https://linecorp.com"
-#           },
-#           "height": "sm",
-#           "style": "link"
-#         },
-#         {
-#           "type": "button",
-#           "action": {
-#             "type": "uri",
-#             "label": "WEBSITE",
-#             "uri": "https://linecorp.com"
-#           },
-#           "height": "sm",
-#           "style": "link"
-#         },
-#         {
-#           "type": "spacer",
-#           "size": "sm"
-#         }
-#       ]
-#     }
-#   }
-# }
+menu = {
+  "type": "flex",
+  "altText": "Flex Message",
+  "contents": {
+    "type": "bubble",
+    "hero": {
+      "type": "image",
+      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
+      "size": "full",
+      "aspectRatio": "20:13",
+      "aspectMode": "cover",
+      "action": {
+        "type": "uri",
+        "label": "Line",
+        "uri": "https://linecorp.com/"
+      }
+    },
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": "Brown Cafe",
+          "size": "xl",
+          "weight": "bold"
+        },
+        {
+          "type": "box",
+          "layout": "baseline",
+          "margin": "md",
+          "contents": [
+            {
+              "type": "icon",
+              "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+              "size": "sm"
+            },
+            {
+              "type": "icon",
+              "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+              "size": "sm"
+            },
+            {
+              "type": "icon",
+              "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+              "size": "sm"
+            },
+            {
+              "type": "icon",
+              "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+              "size": "sm"
+            },
+            {
+              "type": "icon",
+              "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png",
+              "size": "sm"
+            },
+            {
+              "type": "text",
+              "text": "4.0",
+              "flex": 0,
+              "margin": "md",
+              "size": "sm",
+              "color": "#999999"
+            }
+          ]
+        },
+        {
+          "type": "box",
+          "layout": "vertical",
+          "spacing": "sm",
+          "margin": "lg",
+          "contents": [
+            {
+              "type": "box",
+              "layout": "baseline",
+              "spacing": "sm",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "Place",
+                  "flex": 1,
+                  "size": "sm",
+                  "color": "#AAAAAA"
+                },
+                {
+                  "type": "text",
+                  "text": "Miraina Tower, 4-1-6 Shinjuku, Tokyo",
+                  "flex": 5,
+                  "size": "sm",
+                  "color": "#666666",
+                  "wrap": True
+                }
+              ]
+            },
+            {
+              "type": "box",
+              "layout": "baseline",
+              "spacing": "sm",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "Time",
+                  "flex": 1,
+                  "size": "sm",
+                  "color": "#AAAAAA"
+                },
+                {
+                  "type": "text",
+                  "text": "10:00 - 23:00",
+                  "flex": 5,
+                  "size": "sm",
+                  "color": "#666666",
+                  "wrap": True
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "footer": {
+      "type": "box",
+      "layout": "vertical",
+      "flex": 0,
+      "spacing": "sm",
+      "contents": [
+        {
+          "type": "button",
+          "action": {
+            "type": "uri",
+            "label": "CALL",
+            "uri": "https://linecorp.com"
+          },
+          "height": "sm",
+          "style": "link"
+        },
+        {
+          "type": "button",
+          "action": {
+            "type": "uri",
+            "label": "WEBSITE",
+            "uri": "https://linecorp.com"
+          },
+          "height": "sm",
+          "style": "link"
+        },
+        {
+          "type": "spacer",
+          "size": "sm"
+        }
+      ]
+    }
+  }
+}
 
 
 ## 1 ##
@@ -217,8 +217,8 @@ def index():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
 
-  json_open = open('menu.json', 'r')
-  menu = json.load(json_open)
+  # json_open = open('menu.json', 'r')
+  # menu = json.load(json_open) !!!!うごかない；；!!!!
 
    #new_from_json_dictメソッドはJSONデータをFlexMessage等各種オブジェクトに変換してくれるメソッドです
    #FlexSendMessage.new_from_json_dict(対象のJSONデータ）とすることで、
