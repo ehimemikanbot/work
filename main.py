@@ -250,8 +250,9 @@ def handle_message(event):
 
     #FlexMessage ##
     #container_obj = BubbleContainer.new_from_json_dict(menu)
-    #container_obj = FlexSendMessage.new_from_json_dict(menu)
-    container_obj = json.load(menu)
+    # container_obj = FlexSendMessage.new_from_json_dict(menu)
+    #container_obj = json.load(menu)
+    container_obj = menu
 
     #line_bot_api.reply_message(
     #    event.reply_token,
